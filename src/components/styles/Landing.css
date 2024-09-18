@@ -1,0 +1,121 @@
+/* Full screen black background and reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: #000; /* Black background */
+    color: #f5f5f5;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Container with transparent background */
+.landing-container {
+    grid-template-columns: repeat(10, 1fr); /* 16 columns */
+    grid-template-rows: repeat(10, 1fr); /* 9 rows */
+    width: 90vw;
+    height: 90vh;
+    background-color: transparent;
+    border: 1px solid blue;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Role section with continuous text blocks */
+.role {
+    grid-column: 1/11;
+    grid-row: 1/11;
+    z-index: 1; /* Base z-index for the role container */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to new lines */
+    gap: 1px; /* 1px gap between items */
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    overflow: hidden; /* Hide any content that overflows */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    line-height: 1; /* Reduce line height for less vertical space */
+    position: relative; /* Ensure z-index takes effect */
+}
+
+/* Styling for divs inside the role div */
+.role div {
+    font-size: 1.5rem; /* Adjust as needed */
+    font-weight: bold; /* Make font bold */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: transparent;
+    line-height: 1; /* Reduce line height for less vertical space */
+    position: relative; /* Ensure z-index takes effect */
+    z-index: 1; /* Base z-index for divs */
+}
+
+/* Specific gradient color for divs .a and .b */
+.name {
+    z-index: 2;
+    line-height: 0.8; /* Reduce line height for less vertical space */
+    padding: 0;
+    margin: 0;
+    font-weight: 700; /* Set to a weight you need */
+    font-size: 6rem; /* Increase font size */
+    font-family: 'Arial', sans-serif; /* Use Arial font */
+    background: linear-gradient(to bottom, #9d9d9e, #d1d1d1, #ffffff); /* Gradient from top to bottom */
+    -webkit-background-clip: text; /* WebKit-based browsers */
+    background-clip: text; /* Standard syntax */
+    color: transparent; /* Text color must be transparent */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    height: 100%; /* Ensure full height of the grid cell */
+}
+
+/* Adjust positions to minimize space between .a and .b */
+.name { grid-column: 4/8; grid-row: 4/8; }
+
+/* Adjust grid positioning for .c */
+.greentings { grid-column: 6/8; grid-row: 8/9; z-index: 2; }
+
+/* Specific color for text divs */
+#first { color: #565857; z-index: 2; }
+#second { color: #36454F; z-index: 2; }
+#third { color: #8a9a5b5d; z-index: 2; }
+#fourth { color: #575454; z-index: 2; }
+#fifth { color: #6d7275; z-index: 2; }
+#sixth { color: #3b3b3b; z-index: 2; }
+
+
+@media (min-width: 768px) {
+    .name {
+        font-size: 4rem; /* Adjust size for medium screens */
+    }
+}
+
+/* Adjust font size for larger desktops */
+@media (min-width: 1024px) {
+    .name {
+        font-size: 6rem; /* Adjust size for larger screens */
+    }
+}
+
+/* Adjust font size for very large screens */
+@media (min-width: 1440px) {
+    .name {
+        font-size: 8rem; /* Adjust size for extra large screens */
+    }
+}

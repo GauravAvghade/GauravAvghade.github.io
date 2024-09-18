@@ -1,0 +1,164 @@
+/* AboutPage.css */
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: #000; /* Dark background */
+    color: #f5f5f5;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure content doesn't overflow */
+  }
+  
+  /* Add gradient color moving effect to the "About Me" text */
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .about-header {
+    position: absolute;
+    top: 2rem;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    font-size: 3rem;
+    font-weight: bold;
+    color: transparent; /* Make text transparent to show gradient */
+    background: linear-gradient(135deg, #f5afe3, #ee0979, #00c6ff, #0072ff); /* Gradient background */
+    background-size: 200% 200%; /* Larger size for smooth animation */
+    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text; /* Standard syntax */
+    animation: gradientAnimation 5s ease infinite; /* Apply animation */
+  }
+  
+  /* Center the content */
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 4rem 1rem;
+    text-align: center; /* Center text */
+    background: linear-gradient(135deg, #f5afe3, #ee0979, #00c6ff, #0072ff); /* Gradient background */
+    background-size: 200% 200%; /* Larger size for smooth animation */
+    -webkit-background-clip: text; /* Clip background to text */
+    background-clip: text; /* Standard syntax */
+    -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+    animation: gradientAnimation 5s ease infinite; /* Apply animation */
+  }
+  
+  /* Ensure readability with gradient text */
+  .about-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0; /* Light grey for better readability */
+    line-height: 1.6;
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Style buttons with white border and text */
+  .about-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px; /* Set width */
+    height: 50px; /* Set height */
+    border-radius: 25px; /* Rounded corners */
+    border: 1px solid rgb(221, 220, 220); /* White solid border color */
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text color */
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline from text */
+    transition: border-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer; /* Change cursor to pointer */
+    margin: 0 0.5rem; /* Space between buttons */
+  }
+  
+  /* Hover effect for buttons */
+  .button:hover {
+    border-color: rgb(158, 231, 255); /* Light blue border color on hover */
+    color: rgb(158, 231, 255); /* Light blue text color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .button .icon {
+    margin-right: 0.5rem; /* Space between logo and text */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .about-header {
+      font-size: 1.8rem;
+    }
+  
+    .about-content p {
+      font-size: 1.1rem;
+    }
+  
+    .button {
+      width: 130px; /* Adjust width for medium screens */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .about-header {
+      font-size: 1.6rem;
+    }
+  
+    .about-content p {
+      font-size: 1rem;
+    }
+  
+    .button {
+      width: 120px; /* Adjust width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-header {
+      font-size: 1.4rem;
+    }
+  
+    .about-content p {
+      font-size: 0.9rem;
+    }
+  
+    .button {
+      width: 110px; /* Adjust width for even smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .about-header {
+      font-size: 1.2rem;
+    }
+  
+    .about-content p {
+      font-size: 0.8rem;
+    }
+  
+    .button {
+      width: 100px; /* Adjust width for mobile screens */
+    }
+  }
+  

@@ -1,0 +1,200 @@
+/* LandingPage.css */
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: #000; /* Black background */
+    color: #f5f5f5;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Ensure content doesn't overflow */
+  }
+  
+  .intro-text {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1; /* Ensure it stays above background */
+  }
+  
+  .greeting {
+    font-size: 2rem; /* Base font size */
+    font-weight: 500;
+    background: linear-gradient(90deg, #00c6ff, #0072ff); /* Fresh gradient color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%; /* Increased size for thicker gradient */
+    animation: gradientFlow 4s ease infinite;
+    margin: 0;
+  }
+  
+  .name {
+    font-size: 6rem; /* Increased font size */
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffa0e7, #ee0979,#0061d8, #00c6ff ); /* Enhanced gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradientFlow 8s ease infinite;
+    margin: 0;
+    position: relative;
+    z-index: 1; /* Ensure it stays above background */
+    line-height: 1.2; /* Adjust line height to avoid overlap */
+    padding-bottom: 0.5rem; /* Add padding to ensure enough space below */
+  }
+  
+  @keyframes gradientFlow {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 100%; }
+  }
+  
+  .role {
+    font-size: 2rem; /* Base font size */
+    font-weight: 500;
+    background: linear-gradient(90deg, #00aafe, #7a019c); /* Fresh gradient color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%; /* Increased size for thicker gradient */
+    animation: gradientFlow 4s ease infinite;
+    margin: 1rem 0; /* Add margin to avoid overlap */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Align items vertically centered */
+    white-space: nowrap; /* Prevent wrapping */
+    position: relative;
+    z-index: 1; /* Ensure it stays above background */
+  }
+  
+  .dynamic-role {
+    display: inline-block;
+    border-right: 3px solid #ffffff; /* Typing cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blinkCaret 0.75s step-end infinite;
+    margin-left: 0.5rem; /* Space between "I am" and dynamic text */
+    padding-bottom: 0.1rem; /* Add padding to ensure it doesn't overlap */
+  }
+  
+  @keyframes blinkCaret {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #ffffff; }
+  }
+  
+  .social-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+  }
+  
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px; /* Set width */
+    height: 50px; /* Set height */
+    border-radius: 25px; /* Rounded corners */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Faint border color */
+    background-color: transparent; /* Transparent background */
+    color: rgba(255, 255, 255, 0.7); /* Faint text color */
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline from text */
+    transition: border-color 0.3s, color 0.3s, transform 0.3s;
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  .social-button:hover {
+    border-color: #ffffff; /* Full white border color on hover */
+    color: #ffffff; /* Full white text color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .linkedin {
+    border-color: rgba(51, 51, 51, 0.5); /* Faint LinkedIn border color */
+  }
+  
+  .github {
+    border-color: rgba(51, 51, 51, 0.5); /* Faint GitHub border color */
+  }
+  
+  /* Specific styles for spacing between logo and text */
+  .linkedin .icon,
+  .github .icon {
+    margin-right: 0.5rem; /* Space between logo and text */
+  }
+  
+  @media (max-width: 1200px) {
+    .greeting {
+      font-size: 1.8rem;
+    }
+  
+    .name {
+      font-size: 5rem;
+    }
+  
+    .role {
+      font-size: 1.8rem;
+    }
+  
+    .social-button {
+      width: 130px; /* Adjust width for medium screens */
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .greeting {
+      font-size: 1.6rem;
+    }
+  
+    .name {
+      font-size: 4rem;
+    }
+  
+    .role {
+      font-size: 1.6rem;
+    }
+  
+    .social-button {
+      width: 120px; /* Adjust width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .greeting {
+      font-size: 1.4rem;
+    }
+  
+    .name {
+      font-size: 3rem;
+    }
+  
+    .role {
+      font-size: 1.4rem;
+    }
+  
+    .social-button {
+      width: 110px; /* Adjust width for even smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .greeting {
+      font-size: 1.2rem;
+    }
+  
+    .name {
+      font-size: 2.5rem;
+    }
+  
+    .role {
+      font-size: 1.2rem;
+    }
+  
+    .social-button {
+      width: 100px; /* Adjust width for mobile screens */
+    }
+  }
