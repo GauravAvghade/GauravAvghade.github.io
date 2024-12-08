@@ -161,3 +161,31 @@
         font-size: 0.5rem; /* Small font size for year on extra small screens */
     }
 }
+
+@media (max-width: 350px) {
+    
+    .education-header {
+        font-size: 1.6rem;
+    }
+
+    .degree-program {
+        font-size: 0.8rem;
+        text-align: center; /* Align to the right */
+        margin-right: 0; /* Margin for spacing */
+    }
+    .college-name {
+        font-size: 0.4rem; /* Small font size for college name on extra small screens */
+    }
+
+    .education-year {
+        font-size: 0.4rem; /* Small font size for year on extra small screens */
+    }
+    .education-item{
+        display: block;
+    }
+    .education-details {
+        padding-top: 0.8rem;
+        text-align: center; /* Align to the right */
+    }
+}
+

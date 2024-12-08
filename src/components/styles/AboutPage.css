@@ -69,11 +69,11 @@
   
   /* Style buttons with white border and text */
   .about-buttons {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 800px;
+    max-width: 500px;
   }
   
   .button {
@@ -82,7 +82,7 @@
     justify-content: center;
     width: 150px; /* Set width */
     height: 50px; /* Set height */
-    border-radius: 25px; /* Rounded corners */
+    border-radius: 25rem; /* Rounded corners */
     border: 1px solid rgb(221, 220, 220); /* White solid border color */
     background-color: transparent; /* Transparent background */
     color: white; /* White text color */
@@ -151,6 +151,20 @@
   @media (max-width: 576px) {
     .about-header {
       font-size: 1.2rem;
+    }
+  
+    .about-content p {
+      font-size: 0.8rem;
+    }
+  
+    .button {
+      width: 100px; /* Adjust width for mobile screens */
+    }
+  }
+
+  @media (max-width: 400px) {
+    .about-header {
+      font-size: 1.5rem;
     }
   
     .about-content p {

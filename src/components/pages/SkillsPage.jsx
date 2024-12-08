@@ -5,7 +5,7 @@ const SkillsPage = () => {
   return (
     <div className="skills-page">
       {/* Header */}
-      <h1 className="skills-header">Skills and Certifications</h1>
+      <h1 className="skills-header">Skills</h1>
 
       {/* Container or wrapper for skills */}
       <div className="skills-container">

@@ -23,15 +23,13 @@
 .landing-container {
     grid-template-columns: repeat(10, 1fr); /* 16 columns */
     grid-template-rows: repeat(10, 1fr); /* 9 rows */
-    width: 90vw;
+    width: 95vw;
     height: 90vh;
     background-color: transparent;
-    border: 1px solid blue;
     display: grid;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 
 /* Role section with continuous text blocks */
@@ -72,9 +70,9 @@
     padding: 0;
     margin: 0;
     font-weight: 700; /* Set to a weight you need */
-    font-size: 6rem; /* Increase font size */
+    font-size: 5.8rem; /* Increase font size */
     font-family: 'Arial', sans-serif; /* Use Arial font */
-    background: linear-gradient(to bottom, #9d9d9e, #d1d1d1, #ffffff); /* Gradient from top to bottom */
+    background: linear-gradient(to bottom, #fdfdfd, #f2f3f5d3, #ffffff); /* Gradient from top to bottom */
     -webkit-background-clip: text; /* WebKit-based browsers */
     background-clip: text; /* Standard syntax */
     color: transparent; /* Text color must be transparent */
@@ -89,33 +87,234 @@
 .name { grid-column: 4/8; grid-row: 4/8; }
 
 /* Adjust grid positioning for .c */
-.greentings { grid-column: 6/8; grid-row: 8/9; z-index: 2; }
+.social {
+    grid-column: 4/8;
+    grid-row: 8/9;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between; /* Space buttons to left and right */
+    align-items: center;
+    width: 100%; /* Full width of the grid column */
+    padding: 10px 0; /* Add some padding */
+  }
+  
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white; /* White text and icon */
+    background: transparent; /* Transparent background */
+    border: 2px solid white; /* White border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 15rem; /* Rounded corners */
+    font-size: 1.2rem; /* Adjust the font size */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .social-button:hover {
+    background-color: white; /* Change background on hover */
+    color: black; /* Change text and icon color on hover */
+  }
+  
+  .social-icon {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  /* Position LinkedIn on the left */
+  .linkedin {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  
+  /* Position GitHub on the right */
+  .github {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  
 
 /* Specific color for text divs */
-#first { color: #565857; z-index: 2; }
-#second { color: #36454F; z-index: 2; }
+#first { color: #82e9b62d; z-index: 2; }
+#second { color: #36454fe7; z-index: 2; }
 #third { color: #8a9a5b5d; z-index: 2; }
-#fourth { color: #575454; z-index: 2; }
-#fifth { color: #6d7275; z-index: 2; }
+#fourth { color: #e9999f2f; z-index: 2; }
+#fifth { color: #eea3d83d; z-index: 2; }
 #sixth { color: #3b3b3b; z-index: 2; }
 
 
-@media (min-width: 768px) {
+/* Large desktops and laptops (1200px and above) */
+@media (max-width: 1200px) {
     .name {
-        font-size: 4rem; /* Adjust size for medium screens */
+        font-size: 5.56rem; /* Slightly smaller for large desktops */
+    }
+    .landing-container {
+        height: 90vh;
+        width: 98vw;
+    }
+    .social-button {
+        border: 1px solid white; /* White border */
+        padding: 10px 20px; /* Padding for the button */
+        border-radius: 15rem; /* Rounded corners */
+        font-size: 2rem; /* Adjust the font size */
+      }
+}
+
+@media (max-width: 1060px) {
+    .name {
+        font-size: 4.5rem; /* Slightly smaller for large desktops */
+    }
+    .landing-container {
+        height: 84vh;
+    }
+    .social-button {
+        border: 1px solid white; /* White border */
+        padding: 10px 20px; /* Padding for the button */
+        border-radius: 15rem; /* Rounded corners */
+        font-size: 1.5rem; /* Adjust the font size */
+      }
+}
+
+/* Laptops (992px - 1199px) */
+@media (max-width: 992px) {
+    .name {
+        font-size: 4.4rem; /* Adjust size for laptops */
+    }
+    .landing-container {
+        height: 95vh;
     }
 }
 
-/* Adjust font size for larger desktops */
-@media (min-width: 1024px) {
+@media (max-width: 880px) {
     .name {
-        font-size: 6rem; /* Adjust size for larger screens */
+        font-size: 4rem; /* Adjust size for laptops */
+    }
+    .landing-container {
+        height: 95vh;
+    }
+    .social-button {
+        border: 1px solid white; /* White border */
+        padding: 5px 10px; /* Padding for the button */
+        border-radius: 15rem; /* Rounded corners */
+        font-size: 1.2rem; /* Adjust the font size */
+      }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 768px) {
+    .name {
+        font-size: 3.5rem; /* Adjust size for tablets */
+    }
+    .role div {
+        font-size: 1.3rem; /* Adjust as needed */
+        line-height: 1; /* Reduce line height for less vertical space */
+    }
+    .landing-container {
+        height: 95vh;
+    }
+    .social{
+        grid-column: 2/10;
+        grid-row: 8/9;
+    }
+    .social-button {
+        border: 1px solid white; /* White border */
+        padding: 9px 18px; /* Padding for the button */
+        border-radius: 15rem; /* Rounded corners */
+        font-size: 1rem; /* Adjust the font size */
     }
 }
 
-/* Adjust font size for very large screens */
-@media (min-width: 1440px) {
+
+/* Small Phones (up to 575px) */
+@media (max-width: 575px) {
     .name {
-        font-size: 8rem; /* Adjust size for extra large screens */
+        font-size: 2.5rem; /* Smaller font for small phones */
     }
+    .role div {
+        font-size: 0.9rem; /* Adjust as needed */
+    }
+    .landing-container {
+        width: 91vw;
+        height: 90vh;
+    }
+    .social{
+        grid-column: 2/10;
+        grid-row: 8/9;
+    }
+    .social-button {
+        border: 1px solid white; /* White border */
+        padding: 8px 16px; /* Padding for the button */
+        border-radius: 15rem; /* Rounded corners */
+        font-size: 1rem; /* Adjust the font size */
+    }
+    
+}
+
+@media (max-width: 490px) {
+    .name {
+        font-size: 2rem; /* Smaller font for small phones */
+    }
+    .role div {
+        font-size: 0.85rem; /* Adjust as needed */
+    }
+    .landing-container {
+        width: 95vw;
+        height: 90vh;
+    }
+    .social{
+        grid-column: 2/10;
+        grid-row: 8/9;
+    }
+    .social-button {
+        border: 1px solid white; /* White border */
+        padding: 7px 14px; /* Padding for the button */
+        border-radius: 15rem; /* Rounded corners */
+        font-size: 1rem; /* Adjust the font size */
+    }
+}
+@media (max-width: 400px) {
+    .name {
+        font-size: 1.7rem; /* Smaller font for small phones */
+    }
+    .role div {
+        font-size: 0.7rem; /* Adjust as needed */
+    }
+    .landing-container {
+        width: 98vw;
+        height: 90vh;
+    }
+    .social{
+        grid-column: 2/10;
+        grid-row: 8/9;
+    }
+    .social-button {
+        border: 1px solid white; /* White border */
+        padding: 6px 12px; /* Padding for the button */
+        border-radius: 15rem; /* Rounded corners */
+        font-size: 1rem; /* Adjust the font size */
+      }
+}
+
+/* Very small devices (up to 320px) */
+@media (max-width: 360px) {
+    .name {
+        font-size: 1.6rem; /* Smaller font for small phones */
+    }
+    .role div {
+        font-size: 0.6rem; /* Adjust as needed */
+    }
+    .landing-container {
+        width: 95vw;
+        height: 90vh;
+    }
+    .social{
+        grid-column: 2/10;
+        grid-row: 8/9;
+    }
+    .social-button {
+        border: 1px solid white; /* White border */
+        padding: 5px 10px; /* Padding for the button */
+        border-radius: 15rem; /* Rounded corners */
+        font-size: 1rem; /* Adjust the font size */
+      }
 }

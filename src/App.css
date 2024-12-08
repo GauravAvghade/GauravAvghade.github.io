@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}

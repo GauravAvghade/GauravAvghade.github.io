@@ -12,10 +12,10 @@ const AboutPage = () => {
         I'm a final-year B.Tech student in Electronics and Telecommunication Engineering, skilled in front-end development with React.js and TypeScript, and backend technologies like Node.js, Java, SQL, and NoSQL databases. I have experience with the MERN stack and Spring Boot. Proficient in languages like Java, C, C++, JavaScript, and Python, I’m passionate about problem-solving, Data Structures, and Algorithms. I also enjoy creative activities like sketching and painting, and I’m actively working toward a career in software development.
       </div>
       <div className="about-buttons">
-        <a href="https://leetcode.com/yourprofile" className="button">
+        <a href="https://leetcode.com/u/GauravAvghade/" className="button">
           <SiLeetcode /> LeetCode
         </a>
-        <a href="your-resume-link.pdf" className="button" download>
+        <a href="https://github.com/GauravAvghade/Resume/blob/main/Avghade%20Gaurav.pdf" className="button" download>
           <FontAwesomeIcon icon={faCircleDown} /> Resume
         </a>
       </div>
